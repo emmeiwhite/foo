@@ -25,6 +25,9 @@ class App extends Component {
   // }
   // NOW ALL THIS STUFF WILL BE DONE BY REDUX - A State Management library
 
+  onClickHandler = (i)=>{
+      this.props.history.splice(i,1);
+  }
  
   render() {
     return (
@@ -41,7 +44,7 @@ class App extends Component {
             {
               this.props.history.map((value,index)=>{
                 return (
-                  <li className="list-group-item" key={index}>{value.price}</li>
+                  <li className="list-group-item" key={index} onClick={this.onClickHandler.bind(this.index)}>{value.price}</li>
                 )
               })
             }
