@@ -1,5 +1,5 @@
 const initialState = {
-    price:5000,
+    price:1000,
     history:[]
 }
 

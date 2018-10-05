@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import {connect} from 'react-redux';
+
+import * as actionCreator from './store/actions/actionCreator';
 class App extends Component {
   // constructor(props){
   //   super(props);
@@ -64,8 +66,8 @@ const mSTP = (state)=>{
 
 const mDTP = (dispatch)=>{
   return{
-    priceUp:()=>{dispatch({type:'PRICE_UP',payload:279})},
-    priceDown:()=>{dispatch({type:'PRICE_DOWN',payload:432})}
+    priceUp:()=>{dispatch(actionCreator.priceUp(100))},
+    priceDown:()=>{dispatch(actionCreator.priceDown(100))}
   }
 }
 
